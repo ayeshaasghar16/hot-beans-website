@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <img src="contact-us-icons.webp" class="logo" alt="Logo">
+    <h1>Contact Us</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="team.html">Team</a>
+    <a href="careers.html">Careers</a>
+    <a href="training.html">Training</a>
+    <a href="services.html">Services</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>Get in Touch</h2>
+
+        <p>Please fill in the form below and we will contact you soon.</p>
+
+        <!-- FORM START -->
+         
+        <form onsubmit="return validateForm()">
+
+            Name:<br>
+            <input type="text" id="name"><br><br>
+
+            Email:<br>
+            <input type="text" id="email"><br><br>
+
+            Message:<br>
+            <textarea id="message"></textarea><br><br>
+
+            <button type="submit">Submit</button>
+
+        </form>
+<!-- FORM END -->
+
+</div>
+
+</div>
+
+<footer>
+    © 2026 Hot Beans Web
+</footer>
+
+<!-- JAVASCRIPT VALIDATION -->
+<script>
+function validateForm() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    // check name
+    if (name == "") {
+        alert("Please enter your name");
+        return false;
+    }
+
+    // check email
+    // if (email == "") {
+
+    alert("Please enter your email");
+    return false;
+}
+
+if (!email.includes("@")) {
+    alert("Please enter a valid email");
+    return false;
+}
+
+// check message
+if (message == "") {
+    alert("Please enter a message");
+    return false;
+}
+
+
+alert("Message sent successfully!");
+return true;
+
+</script>
+
+</body>
+</html>
